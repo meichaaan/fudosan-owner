@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meichaaan.github.io/fudosan-owner/sitemap.xml

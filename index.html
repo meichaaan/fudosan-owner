@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--
+  「不動産オーナーの資産管理」公式サイト（ランディングページ）
+  残っているTODO:
+  - App Storeリンク: 公開後に .store-badge の href を実URLへ差し替え（Apple公式バッジ画像への変更も推奨）
+  - 独自ドメインを設定する場合は、各ページの og:url / canonical / robots.txt / sitemap.xml のURLを差し替える
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不動産オーナーの資産管理 - 複数棟をひとつのバランスシートに｜公式サイト</title>
+<meta name="description" content="複数の収益不動産を持つオーナーのための資産管理アプリ。物件・借入・現金・証券に散らばった資産と負債を、最小限の手間でひとつのバランスシートに。データは端末の中だけ。iOS対応、1棟目は無料。">
+<link rel="canonical" href="https://meichaaan.github.io/fudosan-owner/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="不動産オーナーの資産管理">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="不動産オーナーの資産管理 - 複数棟をひとつのバランスシートに">
+<meta property="og:description" content="物件・借入・現金・証券に散らばった資産と負債を、最小限の手間でひとつに。完全ローカルのiOSアプリ。1棟目は無料。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://meichaaan.github.io/fudosan-owner/">
+<meta property="og:image" content="https://meichaaan.github.io/fudosan-owner/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="不動産オーナーの資産管理 - 複数棟をひとつのバランスシートに">
+<meta name="twitter:description" content="物件・借入・現金・証券に散らばった資産と負債を、最小限の手間でひとつに。完全ローカルのiOSアプリ。1棟目は無料。">
+<meta name="twitter:image" content="https://meichaaan.github.io/fudosan-owner/assets/og-card.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 45 15H3Z' fill='%23f0a62f'/%3E%3Crect x='5' y='17' width='18' height='12' rx='3' fill='%231f4e79'/%3E%3Crect x='25' y='17' width='18' height='12' rx='3' fill='%237fb3e3'/%3E%3Crect x='5' y='31' width='18' height='12' rx='3' fill='%237fb3e3'/%3E%3Crect x='25' y='31' width='18' height='12' rx='3' fill='%231f4e79'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css?v=9">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 3 45 15H3Z" fill="#f0a62f"/>
+        <rect x="5" y="17" width="18" height="12" rx="3" fill="#1f4e79"/>
+        <rect x="25" y="17" width="18" height="12" rx="3" fill="#7fb3e3"/>
+        <rect x="5" y="31" width="18" height="12" rx="3" fill="#7fb3e3"/>
+        <rect x="25" y="31" width="18" height="12" rx="3" fill="#1f4e79"/>
+      </svg>
+      不動産オーナーの資産管理
+    </a>
+    <nav class="site-nav">
+      <a href="#screens">画面</a>
+      <a href="#features">機能</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">よくある質問</a>
+      <a href="support.html">サポート</a>
+      <a class="nav-cta" href="#download">近日公開</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="app-title-row">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 3 45 15H3Z" fill="#f0a62f"/>
+              <rect x="5" y="17" width="18" height="12" rx="3" fill="#1f4e79"/>
+              <rect x="25" y="17" width="18" height="12" rx="3" fill="#7fb3e3"/>
+              <rect x="5" y="31" width="18" height="12" rx="3" fill="#7fb3e3"/>
+              <rect x="25" y="31" width="18" height="12" rx="3" fill="#1f4e79"/>
+            </svg>
+          </span>
+          <p class="name">不動産オーナーの資産管理<span class="genre">連結バランスシートの資産管理アプリ</span></p>
+        </div>
+        <h1><span class="nw">複数棟の資産も、</span><span class="nw">借入も、</span><br><span class="nw"><span class="marker"><span class="accent">一枚のバランスシート</span></span>に。</span></h1>
+        <p class="lead">物件も、借入も、現金も証券も。散らばった資産をひとつにまとめて、「自分の今」がひと目でわかる。</p>
+        <div class="hero-cta">
+          <a class="store-badge" href="#" aria-disabled="true">
+            <span class="small">App Storeにて</span>
+            <span class="big">近日公開</span>
+          </a>
+          <a class="btn btn-ghost" href="#screens">機能を見る</a>
+        </div>
+        <p class="hero-note">無料で始められます（物件1件・口座3件まで）</p>
+        <div class="trust-chips">
+          <span class="chip-s">データは端末の中だけ</span>
+          <span class="chip-s">アカウント登録不要</span>
+          <span class="chip-s">広告・トラッキングなし</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="screen">
+            <img class="shot" src="assets/shot-map-lg.jpg" width="584" height="1269" fetchpriority="high" alt="アプリのマップ画面。日本地図に所有物件のピンが並び、選択中の物件の評価額7,600万円・ローン残高・累計キャッシュフローが表示されている">
+          </div>
+        </div>
+        <div class="float-chip chip-pos1">
+          <span class="label">純資産</span>
+          <span class="value">9,536万円</span>
+          <span class="up">▲ 前月末比 +411万円</span>
+        </div>
+        <div class="float-chip chip-pos2">
+          <span class="label">累計キャッシュフロー</span>
+          <span class="value">+2,872万円</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 課題 -->
+  <section class="problem section-alt">
+    <div class="container center">
+      <span class="section-tag">WHY</span>
+      <h2 class="section-title">バラバラのままでは、<br>「自分の全体像」は見えない。</h2>
+      <div class="grid">
+        <div class="problem-card">
+          <p class="q">「純資産、いくら？」</p>
+          <p>即答できるオーナーは、意外と少ない。</p>
+        </div>
+        <div class="problem-card">
+          <p class="q">「ローン残高は？」</p>
+          <p>複数棟を合算した「今日の数字」が、どこにもない。</p>
+        </div>
+        <div class="problem-card">
+          <p class="q">「Excel、続かない」</p>
+          <p>更新が面倒で、気づけば半年前のまま。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3つの柱 -->
+  <section class="pillars">
+    <div class="container center">
+      <span class="section-tag">CONCEPT</span>
+      <h2 class="section-title">「自分の純資産を正しく知る」<br>それだけに、集中した。</h2>
+      <p class="section-lead">入居者や家賃入金の管理はやりません。オーナー個人の財務に特化しています。</p>
+      <div class="concept-grid">
+
+        <div class="concept-card wide">
+          <div>
+            <h3>ひとつのバランスシートに連結</h3>
+            <p>物件・借入・現金・証券・保険を積み上げて、純資産・LTV・自己資本比率・累計キャッシュフローまで自動集計。「自分の今」が一枚で見えます。</p>
+          </div>
+          <svg class="viz" viewBox="0 0 540 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="物件・借入・現金・証券が矢印でひとつのバランスシートにまとまる図">
+            <!-- 資産のソース4タイル -->
+            <g stroke="#e3ebf2" fill="#f5f8fb">
+              <rect x="6" y="40" width="100" height="72" rx="12"/>
+              <rect x="114" y="40" width="100" height="72" rx="12"/>
+              <rect x="6" y="128" width="100" height="72" rx="12"/>
+              <rect x="114" y="128" width="100" height="72" rx="12"/>
+            </g>
+            <g fill="none" stroke="#1f4e79" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <g transform="translate(44,54)"><rect x="0" y="6" width="24" height="18" rx="2"/><path d="M5 24v-4h6v4M0 6l12-6 12 6"/></g>
+              <g transform="translate(152,56)"><path d="M0 16L16 0"/><circle cx="2.8" cy="2.8" r="2.8"/><circle cx="13.2" cy="13.2" r="2.8"/></g>
+              <g transform="translate(44,142)"><circle cx="12" cy="11" r="11"/></g>
+              <g transform="translate(152,144)"><path d="M0 16l6-7 4 3 8-10"/><path d="M13 2h5v5"/></g>
+            </g>
+            <text x="56" y="98" text-anchor="middle" font-size="12" font-weight="600" fill="#5b6b7b">物件</text>
+            <text x="164" y="98" text-anchor="middle" font-size="12" font-weight="600" fill="#5b6b7b">借入</text>
+            <text x="56" y="186" text-anchor="middle" font-size="12" font-weight="600" fill="#5b6b7b">現金</text>
+            <text x="164" y="186" text-anchor="middle" font-size="12" font-weight="600" fill="#5b6b7b">証券</text>
+            <text x="56" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#1f4e79">¥</text>
+            <!-- 矢印 -->
+            <g fill="none" stroke="#7fb3e3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M234 106l14 14-14 14"/>
+              <path d="M254 106l14 14-14 14"/>
+            </g>
+            <!-- B/Sカード -->
+            <rect x="292" y="24" width="240" height="192" rx="16" fill="#fbfcfe" stroke="#e3ebf2"/>
+            <text x="312" y="54" font-size="12" font-weight="700" fill="#5b6b7b">バランスシート</text>
+            <text x="312" y="78" font-size="10" fill="#93a5b5">資産</text>
+            <g>
+              <rect x="312" y="84" width="120" height="18" rx="3" fill="#1f4e79"/>
+              <rect x="432" y="84" width="44" height="18" rx="3" fill="#7fb3e3"/>
+              <rect x="476" y="84" width="36" height="18" rx="3" fill="#b7d3ec"/>
+            </g>
+            <text x="312" y="120" font-size="10" fill="#93a5b5">負債・純資産</text>
+            <g>
+              <rect x="312" y="126" width="110" height="18" rx="3" fill="#93a5b5"/>
+              <rect x="422" y="126" width="90" height="18" rx="3" fill="#f0a62f"/>
+            </g>
+            <path d="M467 148v12" stroke="#f0a62f" stroke-width="1.6"/>
+            <text x="467" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#17222e">純資産 9,536万円</text>
+          </svg>
+        </div>
+
+        <div class="concept-card">
+          <svg class="viz" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="カレンダーの月1回の記録日と、自動計算を表す図">
+            <rect x="16" y="12" width="132" height="124" rx="12" fill="#fbfcfe" stroke="#e3ebf2"/>
+            <path d="M16 44h132" stroke="#e3ebf2"/>
+            <g fill="#dbe4ec">
+              <circle cx="36" cy="62" r="3.2"/><circle cx="58" cy="62" r="3.2"/><circle cx="80" cy="62" r="3.2"/><circle cx="102" cy="62" r="3.2"/><circle cx="124" cy="62" r="3.2"/>
+              <circle cx="36" cy="84" r="3.2"/><circle cx="58" cy="84" r="3.2"/><circle cx="102" cy="84" r="3.2"/><circle cx="124" cy="84" r="3.2"/>
+              <circle cx="36" cy="106" r="3.2"/><circle cx="58" cy="106" r="3.2"/><circle cx="80" cy="106" r="3.2"/><circle cx="102" cy="106" r="3.2"/><circle cx="124" cy="106" r="3.2"/>
+            </g>
+            <circle cx="80" cy="84" r="9.5" fill="#f0a62f"/>
+            <path d="M75.5 84l3 3 6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="168" y="36" width="56" height="11" rx="5.5" fill="#1f4e79"/>
+            <rect x="168" y="56" width="44" height="11" rx="5.5" fill="#7fb3e3"/>
+            <rect x="168" y="76" width="50" height="11" rx="5.5" fill="#f6cf8f"/>
+            <rect x="168" y="100" width="56" height="22" rx="11" fill="#eaf3fb"/>
+            <text x="196" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#1f4e79">自動</text>
+          </svg>
+          <h3>手間は、最小限</h3>
+          <p>記録は月1回、残高をなぞるだけ。ローン残高や経過月は自動計算されます。</p>
+        </div>
+
+        <div class="concept-card">
+          <svg class="viz" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="スマートフォンの中に資産データがあり、クラウドには送信されないことを表す図">
+            <path d="M24 78h30a11 11 0 0 0 4-21 15 15 0 0 0-29-4 10 10 0 0 0-5 25z" fill="none" stroke="#93a5b5" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M14 86L66 40" stroke="#93a5b5" stroke-width="2" stroke-linecap="round"/>
+            <rect x="86" y="10" width="68" height="130" rx="14" fill="#fbfcfe" stroke="#17222e" stroke-width="2"/>
+            <path d="M110 20h20" stroke="#e3ebf2" stroke-width="2" stroke-linecap="round"/>
+            <g transform="translate(96,40)">
+              <path d="M24 2L45 14H3Z" fill="#f0a62f"/>
+              <rect x="5" y="16" width="18" height="12" rx="3" fill="#1f4e79"/>
+              <rect x="25" y="16" width="18" height="12" rx="3" fill="#7fb3e3"/>
+              <rect x="5" y="30" width="18" height="12" rx="3" fill="#7fb3e3"/>
+              <rect x="25" y="30" width="18" height="12" rx="3" fill="#1f4e79"/>
+            </g>
+            <rect x="104" y="96" width="32" height="5" rx="2.5" fill="#dbe4ec"/>
+            <rect x="104" y="106" width="26" height="5" rx="2.5" fill="#dbe4ec"/>
+            <rect x="104" y="116" width="30" height="5" rx="2.5" fill="#eaf3fb"/>
+            <circle cx="152" cy="128" r="13" fill="#1f4e79"/>
+            <path d="M148.5 127v-3a3.5 3.5 0 0 1 7 0v3" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+            <rect x="146.5" y="127" width="11" height="8.5" rx="2" fill="#fff"/>
+          </svg>
+          <h3>完全ローカル</h3>
+          <p>データは端末の中だけ。外部送信なし、アカウント不要です。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 画面 -->
+  <section class="screens section-alt" id="screens">
+    <div class="container center">
+      <span class="section-tag">SCREENS</span>
+      <h2 class="section-title">4つのタブで、資産のぜんぶを。</h2>
+      <div class="grid">
+        <div class="screen-card">
+          <img class="shot" src="assets/shot-home.jpg" width="400" height="869" alt="ホーム画面。純資産9,536万円とバランスシート、主要指標タイル" loading="lazy">
+          <p class="tab-name">ホーム</p>
+          <p>純資産と主要指標を、ひと目で。</p>
+        </div>
+        <div class="screen-card">
+          <img class="shot" src="assets/shot-map.jpg" width="400" height="869" alt="マップ画面。日本地図に所有物件のピンが並ぶ" loading="lazy">
+          <p class="tab-name">マップ</p>
+          <p>日本地図に、あなたの棟が並ぶ。</p>
+        </div>
+        <div class="screen-card">
+          <img class="shot" src="assets/shot-properties.jpg" width="400" height="869" alt="物件一覧画面。4棟の評価額と月次キャッシュフロー" loading="lazy">
+          <p class="tab-name">物件</p>
+          <p>評価額・借入・利回りを1画面に。</p>
+        </div>
+        <div class="screen-card">
+          <img class="shot" src="assets/shot-accounts.jpg" width="400" height="869" alt="資産画面。現金・預金、証券、暗号資産、保険の一覧" loading="lazy">
+          <p class="tab-name">資産</p>
+          <p>現金から保険まで、スワイプで更新。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 機能 -->
+  <section class="features" id="features">
+    <div class="container center">
+      <span class="section-tag">FEATURES</span>
+      <h2 class="section-title">主な機能</h2>
+      <p class="section-lead">毎月の入力が「続く」ことを最優先に設計しています。</p>
+      <div class="grid">
+
+        <div class="feature tint-sky">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="9" y="5" width="30" height="38" rx="9" fill="var(--pop)" opacity=".16"/>
+              <path d="M24 12.5l8 6.2v6.8a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2v-6.8z" fill="var(--pop)" stroke="var(--pop)" stroke-width="2.4" stroke-linejoin="round"/>
+              <rect x="22" y="22" width="4" height="5.5" rx="1.4" fill="#fff"/>
+              <rect x="16" y="32.5" width="16" height="3.4" rx="1.7" fill="var(--pop)" opacity=".45"/>
+              <rect x="16" y="38" width="9" height="3.4" rx="1.7" fill="var(--pop)" opacity=".28"/>
+            </svg>
+          </div>
+          <h4>物件登録は1画面</h4>
+          <p>利回りと月次CFを見ながら入力。</p>
+        </div>
+
+        <div class="feature tint-peach">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="10" y="5" width="28" height="38" rx="9" fill="var(--pop)" opacity=".16"/>
+              <rect x="14.5" y="10" width="19" height="10" rx="4" fill="var(--pop)"/>
+              <circle cx="20" cy="14" r="1.9" fill="#fff"/>
+              <circle cx="28" cy="16.5" r="1.9" fill="#fff"/>
+              <path d="M29.5 11.5l-11 7.5" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/>
+              <g fill="var(--pop)" opacity=".5">
+                <circle cx="17.5" cy="27" r="2.4"/><circle cx="24" cy="27" r="2.4"/><circle cx="30.5" cy="27" r="2.4"/>
+                <circle cx="17.5" cy="34.5" r="2.4"/><circle cx="24" cy="34.5" r="2.4"/>
+              </g>
+              <rect x="28.1" y="32.1" width="4.8" height="4.8" rx="2.4" fill="var(--pop)"/>
+            </svg>
+          </div>
+          <h4>返済額から金利を逆算</h4>
+          <p>金利がわからなくても始められる。</p>
+        </div>
+
+        <div class="feature tint-mint">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="5" y="7" width="38" height="34" rx="10" fill="var(--pop)" opacity=".15"/>
+              <rect x="12" y="24" width="6.5" height="11" rx="3.25" fill="var(--pop)" opacity=".45"/>
+              <rect x="20.75" y="18" width="6.5" height="17" rx="3.25" fill="var(--pop)"/>
+              <rect x="29.5" y="27" width="6.5" height="8" rx="3.25" fill="var(--pop)" opacity=".45"/>
+              <path d="M11 15.5h26" stroke="var(--pop)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1 5"/>
+            </svg>
+          </div>
+          <h4>想定と実績の二層CF</h4>
+          <p>特別な月だけ、実績を記録すればOK。</p>
+        </div>
+
+        <div class="feature tint-lilac">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="18" fill="var(--pop)" opacity=".15"/>
+              <path d="M14.5 19h17l-5-5" stroke="var(--pop)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33.5 29h-17l5 5" stroke="var(--pop)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+            </svg>
+          </div>
+          <h4>売却・借り換えに対応</h4>
+          <p>履歴を保ったまま、損益も自動計算。</p>
+        </div>
+
+        <div class="feature tint-lemon">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="9" y="23" width="30" height="19" rx="7" fill="var(--pop)" opacity=".22"/>
+              <rect x="6.5" y="19.5" width="35" height="9" rx="4.5" fill="var(--pop)"/>
+              <rect x="19.5" y="32.5" width="9" height="3.6" rx="1.8" fill="var(--pop)" opacity=".6"/>
+              <path d="M24 4.5v9" stroke="var(--pop)" stroke-width="3.4" stroke-linecap="round"/>
+              <path d="M19 9.5L24 14.5l5-5" stroke="var(--pop)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>バックアップ</h4>
+          <p>JSONで書き出して、機種変更も安心。</p>
+        </div>
+
+        <div class="feature tint-rose">
+          <div class="art">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="7" y="7" width="34" height="34" rx="11" fill="var(--pop)" opacity=".15"/>
+              <g stroke="var(--pop)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 19v-2.5a2.5 2.5 0 0 1 2.5-2.5H19"/>
+                <path d="M29 14h2.5a2.5 2.5 0 0 1 2.5 2.5V19"/>
+                <path d="M34 29v2.5a2.5 2.5 0 0 1-2.5 2.5H29"/>
+                <path d="M19 34h-2.5a2.5 2.5 0 0 1-2.5-2.5V29"/>
+              </g>
+              <rect x="18.4" y="20" width="3.2" height="5" rx="1.6" fill="var(--pop)"/>
+              <rect x="26.4" y="20" width="3.2" height="5" rx="1.6" fill="var(--pop)"/>
+              <path d="M19.5 28.5c1.2 1.2 2.7 1.8 4.5 1.8s3.3-.6 4.5-1.8" stroke="var(--pop)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Face ID／金額マスク</h4>
+          <p>見せたくない金額は、★★★に。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- プライバシー -->
+  <section class="privacy-band">
+    <div class="container center">
+      <span class="section-tag">SECURITY</span>
+      <h2 class="section-title">セキュリティとプライバシー</h2>
+      <p class="section-lead">資産データはお使いのiPhoneの中にのみ保存されます。開発者側にサーバーはありません。</p>
+      <div class="grid">
+        <div class="privacy-item">
+          <div class="tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="17" rx="2.4"/><path d="M10.7 6.2h2.6"/><circle cx="12" cy="17.3" r="0.9" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>完全ローカル保存</h3>
+          <p>入力したデータは端末内のみ。外部送信はありません。</p>
+        </div>
+        <div class="privacy-item">
+          <div class="tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.3"/><path d="M6.3 6.3l11.4 11.4"/></svg>
+          </div>
+          <h3>広告・解析SDKなし</h3>
+          <p>広告も、利用状況のトラッキングもありません。</p>
+        </div>
+        <div class="privacy-item">
+          <div class="tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5.8" width="17" height="12.4" rx="2.4"/><path d="M3.5 9.8h17"/><path d="M7 14.8h4"/></svg>
+          </div>
+          <h3>決済はApp Store</h3>
+          <p>カード情報がアプリや開発者に渡ることはありません。</p>
+        </div>
+      </div>
+      <p class="foot">詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="pricing" id="pricing">
+    <div class="container center">
+      <span class="section-tag">PRICING</span>
+      <h2 class="section-title">1棟目は、ずっと無料。</h2>
+      <p class="section-lead">連結の価値は、複数あってこそ。だから2棟目からが有料です。</p>
+      <div class="grid">
+        <div class="price-card">
+          <p class="plan">FREE</p>
+          <p class="price">¥0</p>
+          <p class="alt">期限なし・アカウント不要</p>
+          <ul>
+            <li>物件 1件まで</li>
+            <li>口座 3件まで</li>
+            <li>機能制限なし</li>
+          </ul>
+        </div>
+        <div class="price-card featured">
+          <span class="featured-badge">複数棟オーナー向け</span>
+          <p class="plan">PRO</p>
+          <div class="pro-options">
+            <div class="pro-option">
+              <p class="type">月額プラン</p>
+              <p class="p">300円<small>／月（税込）</small></p>
+              <p class="note">気軽に始めたい方に。いつでも解約OK。</p>
+            </div>
+            <div class="pro-option buyout">
+              <p class="type">買い切りプラン</p>
+              <p class="p">2,980円<small>（税込）</small></p>
+              <p class="note">一度のお支払いでずっと。10ヶ月以上なら月額よりお得。</p>
+            </div>
+          </div>
+          <ul>
+            <li>物件 無制限</li>
+            <li>口座 無制限</li>
+            <li>どちらも同じ機能</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">価格は税込・App Store決済。月額プランの解約はいつでもApple IDの設定から行えます。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section-alt" id="faq">
+    <div class="container">
+      <div class="center">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+      </div>
+      <div class="list">
+        <details>
+          <summary>賃貸管理アプリと何が違いますか？</summary>
+          <p class="a">入居者・入金・滞納・契約の管理はしません。管理会社に任せている前提で、オーナー個人の資産・負債・純資産の把握に特化しています。運営管理のアプリやサービスとの併用がおすすめです。</p>
+        </details>
+        <details>
+          <summary>データはどこに保存されますか？</summary>
+          <p class="a">お使いのiPhoneの中だけです。外部サーバーへの送信はありません。バックアップはJSONファイルとして自分で書き出し、iCloud Driveなどお好きな場所に保管できます。</p>
+        </details>
+        <details>
+          <summary>機種変更のときはどうすればいいですか？</summary>
+          <p class="a">設定画面からバックアップを書き出し、新しい端末で復元してください。将来的には、ユーザー自身のiCloud（プライベートデータベース）での同期も検討しています。</p>
+        </details>
+        <details>
+          <summary>入力が大変そうです…</summary>
+          <p class="a">最初に物件と借入条件を入れるだけで、ローン残高・返済の経過・累計キャッシュフローは自動計算されます。あとは月1回、「まとめて更新」で前回値を見ながら残高を直すだけ。数分で終わります。</p>
+        </details>
+        <details>
+          <summary>月額と買い切り、どちらがいいですか？</summary>
+          <p class="a">機能はまったく同じです。まず試したい方は月額300円、長く使うと決めている方は買い切り2,980円がおすすめです（10ヶ月以上で月額の合計を下回ります）。月額から買い切りへの切り替えもできます。</p>
+        </details>
+        <details>
+          <summary>無料でどこまで使えますか？</summary>
+          <p class="a">物件1件・口座3件までは、機能制限なく無期限で無料です。2棟目・4口座目を追加するときにProをご案内します。</p>
+        </details>
+        <details>
+          <summary>Proを解約したらデータは消えますか？</summary>
+          <p class="a">消えません。データはすべて端末内にあり、Proは「新しく追加できる件数」が変わるだけです。既存のデータの閲覧・編集はそのまま続けられます。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="download">
+    <div class="container">
+      <span class="mark-lg" aria-hidden="true">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 3 45 15H3Z" fill="#f0a62f"/>
+          <rect x="5" y="17" width="18" height="12" rx="3" fill="#1f4e79"/>
+          <rect x="25" y="17" width="18" height="12" rx="3" fill="#7fb3e3"/>
+          <rect x="5" y="31" width="18" height="12" rx="3" fill="#7fb3e3"/>
+          <rect x="25" y="31" width="18" height="12" rx="3" fill="#1f4e79"/>
+        </svg>
+      </span>
+      <h2 class="section-title">資産を、一段ずつ積み上げていこう。</h2>
+      <a class="store-badge" href="#" aria-disabled="true">
+        <span class="small">App Storeにて</span>
+        <span class="big">近日公開</span>
+      </a>
+      <p class="hero-note">対応OS: iOS 17.0以上 ／ 1棟目は無料</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <p class="top">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 3 45 15H3Z" fill="#f0a62f"/>
+            <rect x="5" y="17" width="18" height="12" rx="3" fill="#7fb3e3"/>
+            <rect x="25" y="17" width="18" height="12" rx="3" fill="#fff"/>
+            <rect x="5" y="31" width="18" height="12" rx="3" fill="#fff"/>
+            <rect x="25" y="31" width="18" height="12" rx="3" fill="#7fb3e3"/>
+          </svg>
+          不動産オーナーの資産管理
+        </p>
+        <p class="desc">複数の収益不動産を持つ個人オーナーのための、連結バランスシートアプリ。データは端末の中だけ。</p>
+      </div>
+      <div>
+        <h5>アプリ</h5>
+        <ul>
+          <li><a href="#screens">画面</a></li>
+          <li><a href="#features">機能</a></li>
+          <li><a href="#pricing">料金</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>サポート</h5>
+        <ul>
+          <li><a href="support.html">サポート</a></li>
+          <li><a href="mailto:kscasa.contact@gmail.com">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>規約</h5>
+        <ul>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="tokusho.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 合同会社K's Casa</p>
+  </div>
+</footer>
+
+</body>
+</html>
