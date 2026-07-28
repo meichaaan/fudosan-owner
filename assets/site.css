@@ -57,21 +57,24 @@ a { color: var(--blue); }
 }
 
 .brand {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; min-height: 44px;
   text-decoration: none; color: var(--ink);
   font-weight: 800; font-size: 1.02rem; letter-spacing: 0.02em;
 }
 .brand svg { width: 30px; height: 30px; flex: none; }
 
 .site-nav { margin-left: auto; display: flex; align-items: center; gap: 4px 20px; flex-wrap: wrap; }
+/* 指で押せるよう縦の当たり判定を44px以上確保する */
 .site-nav a {
   text-decoration: none; color: var(--muted);
   font-size: 0.9rem; font-weight: 600;
+  display: inline-flex; align-items: center; min-height: 44px;
 }
 .site-nav a:hover { color: var(--navy); }
 .site-nav .nav-cta {
   background: var(--navy); color: #fff;
-  padding: 8px 18px; border-radius: 999px; font-size: 0.82rem;
+  padding: 0 18px; border-radius: 999px; font-size: 0.82rem;
+  min-height: 40px;
 }
 .site-nav .nav-cta:hover { color: #fff; opacity: 0.9; }
 
@@ -377,7 +380,7 @@ section[id] { scroll-margin-top: 76px; }
 }
 .feature .art svg { width: 46px; height: 46px; display: block; }
 
-.feature h4 { font-size: 1.02rem; margin-bottom: 6px; color: var(--navy-deep); }
+.feature h3 { font-size: 1.02rem; margin-bottom: 6px; color: var(--navy-deep); }
 .feature p { font-size: 0.86rem; color: var(--muted); line-height: 1.75; }
 
 .tint-sky   { --tint: #e8f2fc; --pop: #2e6da8; }
@@ -506,8 +509,10 @@ section[id] { scroll-margin-top: 76px; }
   margin-bottom: 12px; font-weight: 800;
 }
 .site-footer ul { list-style: none; }
-.site-footer li { margin-bottom: 8px; }
-.site-footer > .container > nav { display: flex; gap: 8px 22px; flex-wrap: wrap; margin-bottom: 16px; }
+.site-footer li { margin-bottom: 0; }
+.site-footer ul a { display: inline-flex; align-items: center; min-height: 40px; }
+.site-footer > .container > nav { display: flex; gap: 0 22px; flex-wrap: wrap; margin-bottom: 16px; }
+.site-footer > .container > nav a { display: inline-flex; align-items: center; min-height: 40px; }
 .site-footer a { color: rgba(238, 244, 250, 0.85); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .site-footer .copy {
@@ -537,6 +542,18 @@ section[id] { scroll-margin-top: 76px; }
 /* ---------- レスポンシブ ---------- */
 
 @media (max-width: 900px) {
+  /* 狭い画面ではナビを折り返さず1行に収め、はみ出す分は横スクロールさせる。
+     折り返すとstickyヘッダーが画面の2割を占めてしまうため。 */
+  .site-nav {
+    flex-wrap: nowrap; overflow-x: auto; width: 100%; margin-left: 0;
+    gap: 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { flex: none; }
+  /* ヘッダーのCTAは本文のダウンロードボタンと重複するため狭い画面では省く */
+  .site-nav .nav-cta { display: none; }
+  .site-header .container { gap: 0 12px; }
+
   section { padding: 60px 0; }
   .hero { padding: 44px 0 60px; }
   .hero .container { grid-template-columns: 1fr; gap: 48px; }
