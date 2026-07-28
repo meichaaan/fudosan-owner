@@ -28,7 +28,70 @@
 <meta name="twitter:image" content="https://meichaaan.github.io/fudosan-owner/assets/og-card.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 45 15H3Z' fill='%23f0a62f'/%3E%3Crect x='5' y='17' width='18' height='12' rx='3' fill='%231f4e79'/%3E%3Crect x='25' y='17' width='18' height='12' rx='3' fill='%237fb3e3'/%3E%3Crect x='5' y='31' width='18' height='12' rx='3' fill='%237fb3e3'/%3E%3Crect x='25' y='31' width='18' height='12' rx='3' fill='%231f4e79'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/site.css?v=11">
+<link rel="stylesheet" href="assets/site.css?v=12">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "不動産オーナーの資産管理",
+      "operatingSystem": "iOS 17.0以上",
+      "applicationCategory": "FinanceApplication",
+      "description": "複数の収益不動産を持つオーナーのための連結バランスシートアプリ。物件・借入・現金・証券をひとつにまとめて、純資産がひと目でわかる。データは端末の中だけ。",
+      "url": "https://meichaaan.github.io/fudosan-owner/",
+      "publisher": { "@type": "Organization", "name": "合同会社K's Casa" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "0",
+        "highPrice": "2980",
+        "priceCurrency": "JPY",
+        "offerCount": "3"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "賃貸管理アプリと何が違いますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "入居者・入金・滞納・契約の管理はしません。管理会社に任せている前提で、オーナー個人の資産・負債・純資産の把握に特化しています。運営管理のアプリやサービスとの併用がおすすめです。" }
+        },
+        {
+          "@type": "Question",
+          "name": "データはどこに保存されますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "お使いのiPhoneの中だけです。外部サーバーへの送信はありません。バックアップはJSONファイルとして自分で書き出し、iCloud Driveなどお好きな場所に保管できます。" }
+        },
+        {
+          "@type": "Question",
+          "name": "機種変更のときはどうすればいいですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "設定画面からバックアップを書き出し、新しい端末で復元してください。将来的には、ユーザー自身のiCloud（プライベートデータベース）での同期も検討しています。" }
+        },
+        {
+          "@type": "Question",
+          "name": "入力が大変そうです…",
+          "acceptedAnswer": { "@type": "Answer", "text": "最初に物件と借入条件を入れるだけで、ローン残高・返済の経過・累計キャッシュフローは自動計算されます。あとは月1回、「まとめて更新」で前回値を見ながら残高を直すだけ。数分で終わります。" }
+        },
+        {
+          "@type": "Question",
+          "name": "月額と買い切り、どちらがいいですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "機能はまったく同じです。まず試したい方は月額300円、長く使うと決めている方は買い切り2,980円がおすすめです（10ヶ月以上で月額の合計を下回ります）。月額から買い切りへの切り替えもできます。" }
+        },
+        {
+          "@type": "Question",
+          "name": "無料でどこまで使えますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "物件1件・口座3件までは、機能制限なく無期限で無料です。2棟目・4口座目を追加するときにProをご案内します。" }
+        },
+        {
+          "@type": "Question",
+          "name": "Proを解約したらデータは消えますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "消えません。データはすべて端末内にあり、Proは「新しく追加できる件数」が変わるだけです。既存のデータの閲覧・編集はそのまま続けられます。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -76,13 +139,13 @@
         <h1><span class="nw">複数棟の資産も、</span><span class="nw">借入も、</span><br><span class="nw"><span class="marker"><span class="accent">一枚のバランスシート</span></span>に。</span></h1>
         <p class="lead">物件も、借入も、現金も証券も。散らばった資産をひとつにまとめて、「自分の今」がひと目でわかる。</p>
         <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:kscasa.contact@gmail.com?subject=%E3%82%A2%E3%83%97%E3%83%AA%E5%85%AC%E9%96%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E5%B8%8C%E6%9C%9B&body=%E3%80%8C%E4%B8%8D%E5%8B%95%E7%94%A3%E3%82%AA%E3%83%BC%E3%83%8A%E3%83%BC%E3%81%AE%E8%B3%87%E7%94%A3%E7%AE%A1%E7%90%86%E3%80%8D%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%9F%E3%82%89%E3%80%81%E3%81%93%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%EF%BC%88%E6%9C%AC%E6%96%87%E3%81%AF%E3%81%93%E3%81%AE%E3%81%BE%E3%81%BE%E3%81%A7%E5%A4%A7%E4%B8%88%E5%A4%AB%E3%81%A7%E3%81%99%E3%80%82%E9%80%81%E4%BF%A1%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8C%E3%81%B0%E5%8F%97%E4%BB%98%E5%AE%8C%E4%BA%86%E3%81%A7%E3%81%99%EF%BC%89">公開通知を受け取る</a>
           <a class="store-badge" href="#" aria-disabled="true">
             <span class="small">App Storeにて</span>
             <span class="big">近日公開</span>
           </a>
-          <a class="btn btn-ghost" href="#screens">機能を見る</a>
         </div>
-        <p class="hero-note">無料で始められます（物件1件・口座3件まで）</p>
+        <p class="hero-note">ボタンを押すとメールアプリが開きます。そのまま送信いただければ、公開時にお知らせします。<br>無料で始められます（物件1件・口座3件まで）</p>
         <div class="trust-chips">
           <span class="chip-s">データは端末の中だけ</span>
           <span class="chip-s">アカウント登録不要</span>
@@ -242,22 +305,30 @@
       <h2 class="section-title">4つのタブで、資産のぜんぶを。</h2>
       <div class="grid">
         <div class="screen-card">
-          <img class="shot" src="assets/shot-home.jpg" width="400" height="869" alt="ホーム画面。純資産9,536万円とバランスシート、主要指標タイル" loading="lazy">
+          <a class="shot-zoom" href="assets/shot-home.jpg">
+            <img class="shot" src="assets/shot-home.jpg" width="800" height="1738" alt="ホーム画面。純資産9,536万円とバランスシート、主要指標タイル" loading="lazy">
+          </a>
           <p class="tab-name">ホーム</p>
           <p>純資産と主要指標を、ひと目で。</p>
         </div>
         <div class="screen-card">
-          <img class="shot" src="assets/shot-map.jpg" width="400" height="869" alt="マップ画面。日本地図に所有物件のピンが並ぶ" loading="lazy">
+          <a class="shot-zoom" href="assets/shot-map.jpg">
+            <img class="shot" src="assets/shot-map.jpg" width="800" height="1738" alt="マップ画面。日本地図に所有物件のピンが並ぶ" loading="lazy">
+          </a>
           <p class="tab-name">マップ</p>
           <p>日本地図に、あなたの棟が並ぶ。</p>
         </div>
         <div class="screen-card">
-          <img class="shot" src="assets/shot-properties.jpg" width="400" height="869" alt="物件一覧画面。4棟の評価額と月次キャッシュフロー" loading="lazy">
+          <a class="shot-zoom" href="assets/shot-properties.jpg">
+            <img class="shot" src="assets/shot-properties.jpg" width="800" height="1738" alt="物件一覧画面。4棟の評価額と月次キャッシュフロー" loading="lazy">
+          </a>
           <p class="tab-name">物件</p>
           <p>評価額・借入・利回りを1画面に。</p>
         </div>
         <div class="screen-card">
-          <img class="shot" src="assets/shot-accounts.jpg" width="400" height="869" alt="資産画面。現金・預金、証券、暗号資産、保険の一覧" loading="lazy">
+          <a class="shot-zoom" href="assets/shot-accounts.jpg">
+            <img class="shot" src="assets/shot-accounts.jpg" width="800" height="1738" alt="資産画面。現金・預金、証券、暗号資産、保険の一覧" loading="lazy">
+          </a>
           <p class="tab-name">資産</p>
           <p>現金から保険まで、スワイプで更新。</p>
         </div>
@@ -498,11 +569,11 @@
         </svg>
       </span>
       <h2 class="section-title">資産を、一段ずつ積み上げていこう。</h2>
-      <a class="store-badge" href="#" aria-disabled="true">
-        <span class="small">App Storeにて</span>
-        <span class="big">近日公開</span>
-      </a>
-      <p class="hero-note">対応OS: iOS 17.0以上 ／ 1棟目は無料</p>
+      <p class="section-lead" style="margin:0 auto">App Storeにて近日公開。公開したら、メールでお知らせします。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:kscasa.contact@gmail.com?subject=%E3%82%A2%E3%83%97%E3%83%AA%E5%85%AC%E9%96%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E5%B8%8C%E6%9C%9B&body=%E3%80%8C%E4%B8%8D%E5%8B%95%E7%94%A3%E3%82%AA%E3%83%BC%E3%83%8A%E3%83%BC%E3%81%AE%E8%B3%87%E7%94%A3%E7%AE%A1%E7%90%86%E3%80%8D%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%9F%E3%82%89%E3%80%81%E3%81%93%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AB%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%EF%BC%88%E6%9C%AC%E6%96%87%E3%81%AF%E3%81%93%E3%81%AE%E3%81%BE%E3%81%BE%E3%81%A7%E5%A4%A7%E4%B8%88%E5%A4%AB%E3%81%A7%E3%81%99%E3%80%82%E9%80%81%E4%BF%A1%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8C%E3%81%B0%E5%8F%97%E4%BB%98%E5%AE%8C%E4%BA%86%E3%81%A7%E3%81%99%EF%BC%89">公開通知を受け取る</a>
+      </div>
+      <p class="hero-note">対応OS: iOS 17.0以上 ／ 1棟目は無料 ／ 開発・運営: 合同会社K's Casa</p>
     </div>
   </section>
 
@@ -552,6 +623,55 @@
     <p class="copy">© 2026 合同会社K's Casa</p>
   </div>
 </footer>
+
+<dialog class="shot-dialog" id="shotDialog">
+  <img id="shotDialogImg" src="" alt="拡大したアプリ画面">
+  <button class="close" type="button">閉じる</button>
+</dialog>
+
+<script>
+(function () {
+  // スクショのタップ拡大（JSが無効ならリンク先の画像がそのまま開く）
+  var dlg = document.getElementById('shotDialog');
+  var img = document.getElementById('shotDialogImg');
+  if (dlg && typeof dlg.showModal === 'function') {
+    document.querySelectorAll('.shot-zoom').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        img.src = a.getAttribute('href');
+        var thumb = a.querySelector('img');
+        img.alt = thumb ? thumb.alt : '拡大したアプリ画面';
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.querySelector('.close').addEventListener('click', function () { dlg.close(); });
+  }
+
+  // スクロールで要素をふわっと表示（prefers-reduced-motion時はCSS側で無効化）
+  // 演出はあくまで飾りなので、何かあったら「全部見える」側に倒す
+  if ('IntersectionObserver' in window) {
+    var ioFired = false;
+    var io = new IntersectionObserver(function (entries) {
+      ioFired = true;
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.problem-card, .concept-card, .screen-card, .feature, .privacy-item, .price-card').forEach(function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = (i % 3) * 70 + 'ms';
+      io.observe(el);
+    });
+    // 保険: Observerが一度も発火しない環境では演出をやめて即全表示
+    setTimeout(function () {
+      if (!ioFired) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
+    }, 1500);
+  }
+})();
+</script>
 
 </body>
 </html>

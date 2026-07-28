@@ -338,11 +338,23 @@ section[id] { scroll-margin-top: 76px; }
 
 /* ---------- 画面（4タブ） ---------- */
 
-.screens .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 52px; }
+/* スクショは「読める大きさ」を優先して2列。タップで拡大できる */
+.screens .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 52px; }
 .screen-card {
   background: #fff; border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 30px 20px 26px;
+  border-radius: var(--radius); padding: 30px 24px 26px;
   box-shadow: var(--shadow-sm); text-align: center;
+}
+.screen-card .shot-zoom {
+  display: block; max-width: 400px; margin: 0 auto 16px;
+  border-radius: 16px; cursor: zoom-in; position: relative;
+}
+.screen-card .shot-zoom .shot { margin-bottom: 0; }
+.screen-card .shot-zoom::after {
+  content: "タップで拡大"; position: absolute; right: 10px; bottom: 10px;
+  background: rgba(23, 34, 46, 0.72); color: #fff;
+  font-size: 0.68rem; font-weight: 700; padding: 4px 10px; border-radius: 999px;
+  pointer-events: none;
 }
 .screen-card .tab-name {
   font-weight: 800; color: var(--navy); font-size: 1.05rem;
@@ -487,6 +499,7 @@ section[id] { scroll-margin-top: 76px; }
 }
 .cta-band .mark-lg svg { width: 54px; height: 54px; }
 .cta-band .section-title { margin-bottom: 8px; }
+.cta-band .hero-cta { justify-content: center; margin: 20px 0 4px; }
 .cta-band .hero-note { margin-top: 14px; }
 .cta-band .store-badge { margin-top: 18px; }
 
@@ -561,7 +574,15 @@ section[id] { scroll-margin-top: 76px; }
   .hero-visual { order: 2; }
   .problem .grid, .pillars .grid, .features .grid,
   .privacy-band .grid, .pricing .grid { grid-template-columns: 1fr; }
-  .screens .grid { grid-template-columns: 1fr 1fr; }
+  /* スクショは横スワイプのカルーセルに（アプリLPの定番。縦に4枚積むより短くなる） */
+  .screens .grid {
+    display: flex; gap: 16px; overflow-x: auto;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 16px; margin-left: -4px; margin-right: -4px;
+    scrollbar-width: none;
+  }
+  .screens .grid::-webkit-scrollbar { display: none; }
+  .screen-card { flex: 0 0 78%; scroll-snap-align: center; }
   .pillars .concept-grid { grid-template-columns: 1fr; }
   .concept-card.wide { display: block; }
   .concept-card.wide .viz { margin-top: 26px; }
@@ -578,7 +599,34 @@ section[id] { scroll-margin-top: 76px; }
   .site-footer .cols { grid-template-columns: 1fr; }
 }
 
+/* ---------- スクショ拡大ダイアログ ---------- */
+
+dialog.shot-dialog {
+  border: none; border-radius: 24px; padding: 12px;
+  background: #fff; box-shadow: var(--shadow);
+  max-width: min(92vw, 460px); max-height: 92vh; margin: auto;
+}
+dialog.shot-dialog::backdrop { background: rgba(16, 22, 29, 0.66); backdrop-filter: blur(3px); }
+dialog.shot-dialog img {
+  border-radius: 14px; max-height: calc(92vh - 84px);
+  width: auto; max-width: 100%; margin: 0 auto;
+}
+dialog.shot-dialog .close {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; min-height: 44px; margin-top: 10px;
+  border: none; border-radius: 12px; cursor: pointer;
+  background: var(--bg-alt); color: var(--ink);
+  font-size: 0.9rem; font-weight: 700; font-family: inherit;
+}
+dialog.shot-dialog .close:hover { background: var(--sky-pale); }
+
+/* ---------- スクロール出現 ---------- */
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
