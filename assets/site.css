@@ -8,7 +8,7 @@
   --sky-pale: #eaf3fb;
   --amber: #f0a62f;
   --amber-pale: #fdf1dc;
-  --green: #12946a;
+  --green: #0d7a58;        /* 白背景で5.33:1（WCAG AA基準4.5を満たす濃さ） */
   --ink: #17222e;
   --muted: #5b6b7b;
   --line: #e3ebf2;
@@ -428,7 +428,8 @@ section[id] { scroll-margin-top: 76px; }
 .price-card .alt { font-size: 0.84rem; color: var(--muted); margin-bottom: 14px; }
 .featured-badge {
   position: absolute; top: -14px; left: 28px;
-  background: var(--amber); color: #fff;
+  /* 白文字だとアンバー地で2.06:1しかないため、濃い茶で6.48:1を確保 */
+  background: var(--amber); color: #3f2c04;
   border-radius: 999px; padding: 3px 14px;
   font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em;
 }
@@ -441,7 +442,7 @@ section[id] { scroll-margin-top: 76px; }
 }
 .pro-option.buyout { border-color: var(--amber); background: var(--amber-pale); }
 .pro-option .type { font-size: 0.76rem; font-weight: 800; color: var(--muted); }
-.pro-option.buyout .type { color: #b07514; }
+.pro-option.buyout .type { color: #8a5a0c; }  /* 淡いアンバー地で5.3:1 */
 .pro-option .p { font-size: 1.5rem; font-weight: 800; line-height: 1.3; margin-top: 2px; }
 .pro-option .p small { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
 .pro-option .note { font-size: 0.72rem; color: var(--muted); margin-top: 4px; line-height: 1.55; }
